@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const FormScreen = () => {
+const FormScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <TextInput style={styles.textInput} placeholder='Title'/>
       <TextInput  style={[styles.textInput,styles.textArea]} multiline placeholder='Body'/>
-      <TouchableOpacity style={styles.addBtn}>
+      <TouchableOpacity onPress={()=>{navigation.navigate("List")}} style={styles.addBtn}>
         <Text style={styles.addText}>Add</Text>
       </TouchableOpacity>
     </View>
